@@ -20,28 +20,14 @@ To write a Python program to check whether a given string is a **palindrome** us
 ---
 
 ## 💻 PROGRAM:
+ADD CODE HERE
 ```
-def is_palindrome(word):
-    if len(word) < 1:
-        return True
-    if word[0] == word[-1]:
-        return is_palindrome(word[1:-1])
-    return False
+def is_palindrome(word): if len(word) <= 1: return True else: return word
 
-# Get user input
-text = input("Enter a word: ")
-
-# Check and print result
-if is_palindrome(text):
-    print("It's a palindrome!")
-else:
-    print("Not a palindrome.")
+str=input() if str==str[::-1]: print("String is a palindrome") else: print("String is not a palindrome")
 ```
-
 ## OUTPUT
-
-![Screenshot 2025-05-07 233136](https://github.com/user-attachments/assets/300121a5-97e3-4a26-ac56-2ada02664f21)
+![image](https://github.com/user-attachments/assets/4deec7d2-bd39-4ac7-bc7a-9dadd83593e1)
 
 ## RESULT
-Program executed successfully.
-
+Thus, the program has been execueted successfully.

@@ -17,24 +17,25 @@ To write a Python program to demonstrate **Head Recursion** by finding and print
 
 ## 💻 PROGRAM:
 ```
-def sum_digits(n):
-    return sum(int(d) for d in str(n))
+def sum_digits(num,accumulator=0):
 
-def fun(n):
-    if n <= 0:
-        return
-    fun(n - 2)  # Head recursion
-    print(f"{n} → {sum_digits(n)}")
+    if num==0:
+        return accumulator
+    if num>0:
+        return sum_digits(num//10,accumulator+num%10)
+    else:
+        return "Not defined"
+    
 
-num = int(input("Enter a number: "))
-if num % 2 != 0:
-    num += 1
-fun(num)
+num= int(input())
+
+print(sum_digits(num))
 ```
 
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/94572e8b-706b-4600-827b-907aa50424be)
+![image](https://github.com/user-attachments/assets/841a7e85-fe9f-4ea1-9794-992dd70eb898)
+
 
 
 ## RESULT
